@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  target: "serverless",
+  loader: "imgix",
   images: {
     domains: ["links.papareact.com", "image.tmdb.org"],
   },
