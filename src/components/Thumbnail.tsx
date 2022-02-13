@@ -9,7 +9,7 @@ interface IThumbnailProps {
 }
 
 const Thumbnail = ({ result }: IThumbnailProps, ref: any) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/original/";
+  const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original/";
 
   return (
     <div
@@ -20,8 +20,8 @@ const Thumbnail = ({ result }: IThumbnailProps, ref: any) => {
         layout="responsive"
         alt={`Thumbnail for: ${result.title}`}
         src={
-          `${BASE_URL}${result.backdrop_path || result.poster_path} ` ||
-          `${BASE_URL}${result.poster_path}`
+          `${IMAGE_BASE_URL}${result.backdrop_path || result.poster_path} ` ||
+          `${IMAGE_BASE_URL}${result.poster_path}`
         }
         width={1920}
         height={1080}
